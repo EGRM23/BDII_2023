@@ -1,0 +1,12 @@
+PassengerId numeric(8,0);
+Survived bool(1);
+Pclass numeric(1,0);
+Name varchar(50);
+Sex varchar(6);
+Age numeric(8,2);
+SibSp numeric(1,0);
+Parch numeric(1,0);
+Ticket varchar(30);
+Fare numeric(8,2);
+Cabin varchar(20);
+Embarked char(1);
