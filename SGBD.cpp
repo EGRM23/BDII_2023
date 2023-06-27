@@ -204,7 +204,6 @@ void cargar_datos(int& byte_registro, int& cant_registros, dato* &columnas, int&
 	char letra;
 	char *tipo = NULL;
 	tipo = (char*)malloc(sizeof(char));
-	std::cout << tipo << "no se" << endl;
 	int num_tipo;
 	int cant_letras;
 
@@ -287,6 +286,7 @@ void imprimir_registro(const int byte_registro, int& cant_registros)
 	std::cout << ".\n";
 }
 
+/*
 void cargar_sectores_variable(disco_virtual *MIDISCO, const int& cant_registros, const int& byte_registro, dato* &columnas, int& cant_columnas)
 {
 	std::cout << "\nFASE 3: CARGAR SECTORES\n";
@@ -323,6 +323,7 @@ void cargar_sectores_variable(disco_virtual *MIDISCO, const int& cant_registros,
 	}
 
 }
+*/
 
 void cargar_sectores(disco_virtual *MIDISCO, const int& cant_registros, const int& byte_registro)
 {
@@ -643,7 +644,6 @@ int main()
 	dato *columnas = (dato*)malloc(sizeof(dato)*0);;
 	int cant_columnas = 0;
 	cargar_datos(byte_registro,cant_registros,columnas,cant_columnas);
-	/*
 	while(llave == 1)
 	{
 		imprimir_registro(byte_registro,cant_registros);
@@ -651,7 +651,6 @@ int main()
 		std::cin >> llave;
 	}
 	llave = 1;
-	*/
 	disco_virtual* MIDISCO = creardisco();
 	cargar_sectores(MIDISCO,cant_registros,byte_registro);
 
